@@ -14,7 +14,8 @@ const enum DayOfWeek {
 }
 
 const isWeekend = (dayOfWeek: DayOfWeek): boolean =>
-  [DayOfWeek.saturday, DayOfWeek.sunday].some((day) => day === dayOfWeek);
+  DayOfWeek.saturday === dayOfWeek || DayOfWeek.sunday === dayOfWeek;
 
 console.log(isWeekend(DayOfWeek.friday));
 console.log(isWeekend(DayOfWeek.sunday));
+console.log(isWeekend(DayOfWeek.saturday));
